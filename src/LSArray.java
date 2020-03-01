@@ -1,3 +1,11 @@
+/**
+*LSArray.java - Reads in Load Shedding Data from file to array
+*Provides method to search through it
+*@ThaddeusOwl, 01-03-2020
+*/
+
+
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
