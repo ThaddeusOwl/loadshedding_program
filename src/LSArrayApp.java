@@ -1,11 +1,13 @@
+import java.io.FileNotFoundException;
+
 public class LSArrayApp{
 
-	public static void main(String [] args){
-		array = new LSArray();
+	public static void main(String [] args) throws FileNotFoundException{
+		LSArray array = new LSArray();
 		if(args.length == 1){
-			array.toString(args);
+			System.out.println(array.search(args[0]));
 		}else{
-			array.toString();
+			System.out.println(array);
 		}
 	}
 }

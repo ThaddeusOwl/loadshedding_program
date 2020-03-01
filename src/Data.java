@@ -1,6 +1,6 @@
 public class Data{
 
-private String  details;
+private String details;
 private String areas;
 
 public Data(String a, String b){

@@ -1,0 +1,19 @@
+JAVAC=/usr/bin/javac
+.SUFFIXES: .java .class
+
+SRCDIR=/home/owl/loadshedding_program/src
+BINDIR=/home/owl/loadshedding_program/bin
+
+$(BINDIR)/%.class:$(SRCDIR)/%.java
+	$(JAVAC) -d $(BINDIR)/ -cp $(BINDIR) $<
+        
+CLASSES=BTQueueNode.class  BTQueue.class  BinaryTreeNode.class BinaryTree.class BinarySearchTree.class  BinarySearchTreeTest.class  # fill in
+
+CLASS_FILES=$(CLASSES:%.class=$(BINDIR)/%.class)
+
+default:
+	$(CLASS_FILES)
+clean:
+	rm $(BINDIR)/*.class
+run:
+	@java -cp bin BinarySearchTreeTest  #fill in here too
