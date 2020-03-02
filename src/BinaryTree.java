@@ -1,7 +1,6 @@
 // Hussein's Binary Tree
 // 26 March 2017
 // Hussein Suleman
-
 public class BinaryTree<dataType>
 {
    BinaryTreeNode<dataType> root;
@@ -37,7 +36,7 @@ public class BinaryTree<dataType>
    
    public void visit ( BinaryTreeNode<dataType> node )
    {
-      System.out.println (node.data);
+      System.out.println(node.data);
    }
    
    public void preOrder ()
@@ -98,4 +97,5 @@ public class BinaryTree<dataType>
             q.enQueue (node.getRight ());
       }
    }
+   
 }

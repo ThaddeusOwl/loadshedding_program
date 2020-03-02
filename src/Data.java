@@ -4,7 +4,7 @@
 */
 
 
-public class Data{
+public class Data implements Comparable<Data>{
 
 private String details;
 private String areas;
@@ -14,12 +14,29 @@ public Data(String a, String b){
 	areas=b;
 }
 
+public Data(String a){
+   details=a;
+}
+
 public String getDetails(){
 	return details;
 }
 
 public String getAreas(){
 	return areas;
+}
+
+public int compareTo(Data other){
+   if(this.getDetails().compareTo(other.getDetails())>0){
+      return 1;}
+   if(this.getDetails().compareTo(other.getDetails())<0){
+      return -1;}
+   else{
+      return 0;}
+}
+
+public String toString(){
+   return (details+" "+areas);
 }
 
 }
