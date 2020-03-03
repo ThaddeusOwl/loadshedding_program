@@ -13,6 +13,8 @@ import java.util.Scanner;
 public class LSArray{
 
 	Data[] dataArray;
+   int insertOpCount=0;
+   int searchOpCount=0;
    
 	public LSArray() throws FileNotFoundException{
 		this.dataArray = new Data[2976];
@@ -32,7 +34,8 @@ public class LSArray{
 		String toReturn="Areas not found";
       int j=0;
 		for(int i=0; i<dataArray.length; i++){
-			if(details.equals(dataArray[i].getDetails())){
+			searchOpCount++;
+         if(details.equals(dataArray[i].getDetails())){
 				return dataArray[i].getAreas();
 			}
 		}
@@ -50,6 +53,14 @@ public class LSArray{
 	public String toString(String details){
 		return search(details);
 	}
+
+   public int getInsertOpCount(){
+      return insertOpCount;   
+   }
+   
+   public int getSearchOpCount(){
+      return searchOpCount;
+   }
 
 
 

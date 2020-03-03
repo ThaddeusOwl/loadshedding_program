@@ -29,5 +29,12 @@ public class Tree{
       bst.inOrder();
    }
    
+   public int getInsertOpCount(){
+      return bst.insertOpCount;   
+   }
+   
+   public int getSearchOpCount(){
+      return bst.searchOpCount;
+   }
 
 }

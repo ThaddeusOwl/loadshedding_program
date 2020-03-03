@@ -16,5 +16,7 @@ public class LSArrayApp{
 		}else{
 			System.out.println(array);
 		}
+      System.out.println("Insert Operation Count: " + array.getInsertOpCount());
+      System.out.println("Search Operation Count: " + array.getSearchOpCount());
 	}
 }
