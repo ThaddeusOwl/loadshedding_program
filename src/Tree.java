@@ -5,11 +5,26 @@ import java.util.Scanner;
 public class Tree{
 
 	BinarySearchTree<Data> bst;
-
-	public Tree() throws FileNotFoundException{
+   String fileName="Load_Shedding_All_Areas_Schedule_and_Map.clean.final.txt";
+   int n=2976;
+   
+   public Tree() throws FileNotFoundException{
 		bst = new BinarySearchTree<Data>();
-		Scanner file=new Scanner(new File("Load_Shedding_All_Areas_Schedule_and_Map.clean.final.txt"));
-		while(file.hasNextLine()){
+		Scanner file=new Scanner(new File(fileName));
+		for(int i=0; i<n; i++){
+			String line = file.nextLine();
+			String[] lineSplit = line.split(" ", 2);
+         bst.insert(new Data(lineSplit[0],lineSplit[1]));
+		}
+   }
+   
+   public Tree(int a, String b) throws FileNotFoundException{
+		this.n=a;
+      if(b.equals("default")){
+      }else{this.fileName=b;}
+      bst = new BinarySearchTree<Data>();
+		Scanner file=new Scanner(new File(fileName));
+		for(int i=0; i<n; i++){
 			String line = file.nextLine();
 			String[] lineSplit = line.split(" ", 2);
          bst.insert(new Data(lineSplit[0],lineSplit[1]));
@@ -36,5 +51,13 @@ public class Tree{
    public int getSearchOpCount(){
       return bst.searchOpCount;
    }
+   
+   //public void setFileName(String x){
+      //if(x.equals("default")){
+      //}else{fileName=x;}
+   //}
+      
+   //public void setNumber(int x){
+      //n=x;}
 
 }
