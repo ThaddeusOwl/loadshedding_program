@@ -12,12 +12,13 @@ public class RandomizeLSD{
 		Scanner file = new Scanner(new File("Load_Shedding_All_Areas_Schedule_and_Map.clean.final.txt"));
 		while(file.hasNextLine()){
 			String line = file.nextLine();
-			lines.add(line);
+			lines.add(line);}
 
 		Collections.shuffle(lines);
 		for(String s:lines){
-         System.out.println(s);}
-		}
+         System.out.println(s);
+      }
+		
 	}
 
 
