@@ -16,13 +16,12 @@ public class LSArrayApp{
          System.out.println(array.search(args[0]));}
       else if(args.length == 3){ //java LSArrayApp "1_2_3" "200" "diffFile.txt"
          array = new LSArray(Integer.parseInt(args[1]),args[2]);
-         //array.setFileName(args[2]); //change source file
-         //array.setNumber(Integer.parseInt(args[1]));//change number of entries
-         System.out.println(array.search(args[0]));}
-      else{
+         array.search(args[0]);
+         System.out.println(array.getInsertOpCount()+","+array.getSearchOpCount());
+      }else{
 			array = new LSArray();
-         System.out.println(array);}
+         System.out.println(array);
       System.out.println("Insert Operation Count: " + array.getInsertOpCount());
-      System.out.println("Search Operation Count: " + array.getSearchOpCount());
+      System.out.println("Search Operation Count: " + array.getSearchOpCount());}
 	}
 }
