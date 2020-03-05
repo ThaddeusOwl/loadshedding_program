@@ -8,20 +8,20 @@ public class Data implements Comparable<Data>{
 
 private String details;
 private String areas;
-
+/**sets details and areas */
 public Data(String a, String b){
 	details=a;
 	areas=b;
 }
-
+/**simply sets details */
 public Data(String a){
    details=a;
 }
-
+/**returns details */
 public String getDetails(){
 	return details;
 }
-
+/**returns areas */
 public String getAreas(){
 	return areas;
 }

@@ -1,3 +1,9 @@
+/**
+*Reads in LS file, shuffles Data and outputs in a new order
+*Author: @ThaddeusOwl, 03-2020
+*/
+
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

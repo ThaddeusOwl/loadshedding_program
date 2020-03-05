@@ -11,7 +11,7 @@ clean:
 run:
 	java -cp ./bin Main
 docs:
-	javadoc -classpath ${BINDIR} -d docs/ src/*.java
+	javadoc -classpath ${BINDIR} -d doc/ src/*.java
 cleandocs:
 	rm -r docs/*
 

@@ -2,6 +2,8 @@
 *LSArray.java - Reads in Load Shedding Data from file to array
 *Provides method to search through it
 *@ThaddeusOwl, 01-03-2020
+*Use LSArray(int,string) if you want to change the dataset length or input file
+*else use LSArray() for default settings
 */
 
 
@@ -17,7 +19,7 @@ public class LSArray{
    int searchOpCount=0;
    String fileName="Load_Shedding_All_Areas_Schedule_and_Map.clean.final.txt";
    int n=2976;
-   
+   /**Reads in file to an array with default dataset lenth and filename */
 	public LSArray() throws FileNotFoundException{
 		this.dataArray = new Data[n];
 
@@ -31,7 +33,7 @@ public class LSArray{
 			}
 		}
 	}
-   
+   /** reads in specified number of lines for specified file in array*/
    public LSArray(int a, String b) throws FileNotFoundException{
 		this.n=a;
       if(b.equals("default")){
@@ -48,7 +50,7 @@ public class LSArray{
 			}
 		}
 	}
-	
+	/**Searches for the given parameter's match in the array and outputs the corresponding area*/
 	public String search(String details){
 		String toReturn="Areas not found";
       int j=0;
@@ -60,7 +62,7 @@ public class LSArray{
 		}
 		return toReturn;
 	}
-	
+	/**Returns String of all parameters/details alongside their corresponding areas */
 	public String toString(){
 		String toReturn="";
 		for(int i=0; i<dataArray.length; i++){
@@ -72,18 +74,13 @@ public class LSArray{
 	public String toString(String details){
 		return search(details);
 	}
-
+   /**Returns the number of comparison operators used when insert method was called*/
    public int getInsertOpCount(){
       return insertOpCount;   
    }
-   
+   /**Return number of comparison operations used when search method was called */
    public int getSearchOpCount(){
       return searchOpCount;
-   }
-   
-   public void setFileName(String x){
-      if(x.equals("default")){
-      }else{fileName=x;}
    }
       
    public void setNumber(int x){
