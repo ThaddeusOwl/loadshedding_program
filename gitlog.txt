@@ -1,0 +1,21 @@
+0: commit f900d4055ba8438ecdcea94b49d51652c71c3ad1
+1: Author: Thaddeus Owl <61245401+ThaddeusOwl@users.noreply.github.com>
+2: Date: Thu Mar 5 06:10:12 2020 +0200
+3:
+4: added javadocs
+5:
+6: commit 8f6adab3a07b4ec0da70ea37ffb0b4145b928608
+7: Author: Thaddeus Owl <61245401+ThaddeusOwl@users.noreply.github.com>
+8: Date: Wed Mar 4 09:44:09 2020 +0200
+9:
+...
+79: Author: Thaddeus Owl <61245401+ThaddeusOwl@users.noreply.github.com>
+80: Date: Sun Mar 1 12:53:53 2020 +0200
+81:
+82: Added Data Class
+83:
+84: commit cdc677633a56ad0d554e00390ce66aa550a9550f
+85: Author: Thaddeus Owl <61245401+ThaddeusOwl@users.noreply.github.com>
+86: Date: Sun Mar 1 11:04:04 2020 +0200
+87:
+88: first commit
